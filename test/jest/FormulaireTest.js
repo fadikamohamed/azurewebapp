@@ -1,12 +1,12 @@
 'use strict';
-jest.unmock('../src/App.tsx');
+jest.unmock('../src/componants/Formulaire.tsx');
 
 import React from 'react';
 import {
   renderIntoDocument,
   findRenderedDOMComponentWithTag
 } from 'react-addons-test-utils';
-import Product from '../src/App.tsx';
+import Product from '../src/componants/Formulaire.tsx';
 
 describe('Product', () => {
   it('Should render product with name, price and stock', () => {
@@ -16,7 +16,7 @@ describe('Product', () => {
         withStock={false}
       />
     );
-    const productTitle = findRenderedDOMComponentWithTag(testedComponent, 'Link');
-    expect(productTitle.textContent).toEqual('Equipe');
+    const productTitle = findRenderedDOMComponentWithTag(testedComponent, choixClasse('Archer'));
+    expect(productTitle.textContent).toBeNull();
   });
 });
