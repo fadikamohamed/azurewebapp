@@ -16,7 +16,7 @@ describe('Product', () => {
         withStock={false}
       />
     );
-    const productTitle = findRenderedDOMComponentWithTag(testedComponent, 'li');
-    expect(productTitle.textContent).toEqual('');
+    const productTitle = findRenderedDOMComponentWithTag(testedComponent, 'Link');
+    expect(productTitle.textContent).toEqual('Equipe');
   });
 });
